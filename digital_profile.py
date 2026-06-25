@@ -1,4 +1,3 @@
-st.title("🌸 My Digital Profile")
 
 st.header("🍮 แนะนำตัว")
 st.write("นางสาวจอมขวัญ อาภัย")
