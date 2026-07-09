@@ -1,0 +1,6 @@
+import streamlit as st
+st.title("เปลี่ยนแปลงปี พ.ศ. เป็น ค.ศ. ")
+
+bh.year=st.number_input("กรอกปี พ.ศ. ที่ต้องการเปลี่ยนแปลงได้เลย",value=2569)
+ce_year=bh_year-543
+st.header(f"ปี ค.ศ. คือ : {ce_year}")
