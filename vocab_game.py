@@ -34,9 +34,9 @@ def show_result_dialog(ans1, ans2):
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
     else:
-        st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
+         st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
        if score == 2:
-        st.success("🎉 You win!")
+         st.success("🎉 You win!")
     else:
         st.error("💀 You lose!")
 
