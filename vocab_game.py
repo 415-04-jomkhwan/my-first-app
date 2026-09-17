@@ -65,32 +65,32 @@ def show_result_dialog(ans1, ans2, ans3, ans4):
 st.button("🎮 เริ่มเล่นเกม", on_click=reset_game)
 
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
-time_left = int(30 - (time.time() - st.session_state.start))
-
-if  time_left > 0:
-        st.error(f"⏳ เหลือเวลา: {time_left} วินาที")
-else:
-        st.session_state.is_ended = True
-        st.rerun()
-
-st.divider()
-
-ans1 = st.text_input(
-    "ข้อ 1: An `a _ _ l e` a day keeps the doctor away. 🍎",
-    value=st.session_state.ans1_val,
-)
-ans2 = st.text_input(
-    "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
-    value=st.session_state.ans2_val,
-)
-ans3 = st.text_input(
-    "ข้อ 3: The sun is very `h _t`. ☀️",
-    value=st.session_state.ans3_val,
-)
-ans4 = st.text_input(
-    "ข้อ 4: = The `d _ g`said woof . 🐶",
-    value=st.session_state.ans4_val,
-)
+                time_left = int(30 - (time.time() - st.session_state.start))
+                
+                if  time_left > 0:
+                        st.error(f"⏳ เหลือเวลา: {time_left} วินาที")
+                else:
+                        st.session_state.is_ended = True
+                        st.rerun()
+                
+                st.divider()
+                
+                ans1 = st.text_input(
+                    "ข้อ 1: An `a _ _ l e` a day keeps the doctor away. 🍎",
+                    value=st.session_state.ans1_val,
+                )
+                ans2 = st.text_input(
+                    "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
+                    value=st.session_state.ans2_val,
+                )
+                ans3 = st.text_input(
+                    "ข้อ 3: The sun is very `h _t`. ☀️",
+                    value=st.session_state.ans3_val,
+                )
+                ans4 = st.text_input(
+                    "ข้อ 4: = The `d _ g`said woof . 🐶",
+                    value=st.session_state.ans4_val,
+                )
 
 
 st.session_state.ans1_val = ans1
