@@ -32,25 +32,25 @@ def show_result_dialog(ans1, ans2, ans3, ans4):
     u_ans3 = ans3.strip().lower()
     u_ans4 = ans4.strip().lower()
 
-if u_ans1 = st.text_input"apple":
+if u_ans1 = st.text_input "apple":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
 else:
         st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
 
-if u_ans2 = st.text_input"fish":
+if u_ans2 = st.text_input "fish":
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
 else:
          st.error(f"❌ ข้อ 2: ยังไม่ถูกต้อง (คุณตอบ '{u_ans2}')")
 
-if u_ans3 = st.text_input"hot":
+if u_ans3 = st.text_input "hot":
         st.success("✅ ข้อ 3: ถูกต้อง")
         score += 1
 else:
         st.error(f"❌ ข้อ 3: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')")
     
-if u_ans4 = st.text_input"dog":
+if u_ans4 = st.text_input "dog":
         st.success("✅ ข้อ 4: ถูกต้อง")
         score += 1
 else:
