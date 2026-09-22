@@ -81,11 +81,11 @@ current_answers[q["key"]] = ans
 
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
     if st.button("📥 ส่งคำตอบ"):
-st.session_state.is_ended = True
-st.rerun()
+    st.session_state.is_ended = True
+    st.rerun()
 
-time.sleep(1)
-st.rerun()
+    time.sleep(1)
+    st.rerun()
 
 
 if st.session_state.get("is_ended", False):
