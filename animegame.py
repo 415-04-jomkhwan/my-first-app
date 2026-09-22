@@ -21,10 +21,10 @@ if val_key not in st.session_state:
 
 
 def reset_game():
-for q in QUESTIONS:
-    st.session_state[f"{q['key']}_val"] = "" # เคลียร์ค่าทุกช่อง
-    st.session_state.start = time.time() # เริ่มเวลาใหม่
-    st.session_state.is_ended = False # ปิด Dialog
+    for q in QUESTIONS:
+        st.session_state[f"{q['key']}_val"] = "" # เคลียร์ค่าทุกช่อง
+        st.session_state.start = time.time() # เริ่มเวลาใหม่
+        st.session_state.is_ended = False # ปิด Dialog
 
 
 
