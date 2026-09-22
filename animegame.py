@@ -1,4 +1,4 @@
-port time
+import time
 import streamlit as st
 
 st.title("⏱️ เกมเติมศัพท์จับเวลา — ของใช้ในบ้าน")
