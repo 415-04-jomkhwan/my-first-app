@@ -35,7 +35,7 @@ def show_result_dialog(answers):
 
     for i, q in enumerate(QUESTIONS, start=1):
         u_ans = answers[q["key"]].strip().lower()
-        if u_ans == q["answer"]:
+    if u_ans == q["answer"]:
             st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง — {q['answer']}")
                 score += 1
         else:
