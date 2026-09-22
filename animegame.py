@@ -30,8 +30,8 @@ def reset_game():
 
 @st.dialog("📊 สรุปผลการเล่นเกม")
 def show_result_dialog(answers):
-st.balloons()
-score = 0
+    st.balloons()
+    score = 0
 
 for i, q in enumerate(QUESTIONS, start=1):
 u_ans = answers[q["key"]].strip().lower()
