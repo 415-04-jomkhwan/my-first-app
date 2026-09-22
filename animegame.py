@@ -36,19 +36,19 @@ def show_result_dialog(answers):
     for i, q in enumerate(QUESTIONS, start=1):
         u_ans = answers[q["key"]].strip().lower()
 if u_ans == q["answer"]:
-st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง — {q['answer']}")
-score += 1
+    st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง — {q['answer']}")
+    score += 1
 else:
-st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
+    st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
 
-st.info(f"🏆 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
+    st.info(f"🏆 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
 
 if score == len(QUESTIONS):
-st.success("🎉 You win! เต็มทุกข้อ!")
+    st.success("🎉 You win! เต็มทุกข้อ!")
 elif score >= len(QUESTIONS) * 0.6:
-st.success("👍 เก่งมาก!")
+    st.success("👍 เก่งมาก!")
 else:
-st.error("💀 You lose! ลองใหม่อีกครั้งนะ")
+    st.error("💀 You lose! ลองใหม่อีกครั้งนะ")
 
 
 
