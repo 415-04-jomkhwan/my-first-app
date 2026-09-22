@@ -69,8 +69,8 @@ else:
 
 current_answers = {}
 for i, q in enumerate(QUESTIONS, start=1):
-val_key = f"{q['key']}_val"
-ans = st.text_input(
+    val_key = f"{q['key']}_val"
+    ans = st.text_input(
 f"ข้อ {i}: `{q['hint']}` {q['emoji']}",
 value=st.session_state[val_key],
 key=f"input_{q['key']}",
