@@ -15,7 +15,7 @@ QUESTIONS = [
 ]
 
 for q in QUESTIONS:
-val_key = f"{q['key']}_val"
+    val_key = f"{q['key']}_val"
 if val_key not in st.session_state:
 st.session_state[val_key] = ""
 
