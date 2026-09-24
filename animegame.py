@@ -44,12 +44,12 @@ def show_result_dialog(answers):
 
     st.info(f"🏆 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
 
-if score == len(QUESTIONS):
-    st.success("🎉 You win! เต็มทุกข้อ!")
-elif score >= len(QUESTIONS) * 0.6:
-    st.success("👍 เก่งมาก!")
-else:
-    st.error("💀 You lose! ลองใหม่อีกครั้งนะ")
+    if score == len(QUESTIONS):
+        st.success("🎉 You win! เต็มทุกข้อ!")
+    if score >= len(QUESTIONS) * 0.6:
+        st.success("👍 เก่งมาก!")
+    else:
+        st.error("💀 You lose! ลองใหม่อีกครั้งนะ")
 
 
 
