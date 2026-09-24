@@ -34,9 +34,9 @@ def show_result_dialog(answers):
     score = 0
     
     for i, q in enumerate(QUESTIONS, start=1):
-    # ดึงคำตอบอย่างปลอดภัย หากหาคีย์ไม่เจอจะใส่ค่าว่าง "" ให้แทน
-    raw_ans = answers.get(q["key"], "") if answers else ""
-    u_ans = str(raw_ans).strip().lower()
+    
+        raw_ans = answers.get(q["key"], "") if answers else ""
+        u_ans = str(raw_ans).strip().lower()
     
     if u_ans == q["answer"]:
     st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง - {q['answer']}")
