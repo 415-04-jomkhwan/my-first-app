@@ -78,7 +78,7 @@ for i, q in enumerate(QUESTIONS, start=1):
         key=input_key
         )
 
-current_answers[q["key"]] = ans
+        current_answers[q["key"]] = ans
 
 
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
