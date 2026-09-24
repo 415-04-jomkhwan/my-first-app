@@ -30,27 +30,29 @@ def reset_game():
 
 @st.dialog("📊 สรุปผลการเล่นเกม")
 def show_result_dialog(answers):
-    st.balloons()
-    score = 0
+st.balloons()
+score = 0
 
-    for i, q in enumerate(QUESTIONS, start=1):
-        u_ans = answers[q["key"]].strip().lower()
-    if u_ans == q["answer"]:
-        st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง — {q['answer']}")
-        score += 1
-        
-    else:
-            st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
+for i, q in enumerate(QUESTIONS, start=1):
+# ดึงคำตอบอย่างปลอดภัย หากหาคีย์ไม่เจอจะใส่ค่าว่าง "" ให้แทน
+raw_ans = answers.get(q["key"], "") if answers else ""
+u_ans = str(raw_ans).strip().lower()
 
-    st.info(f"🏆 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
+if u_ans == q["answer"]:
+st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง - {q['answer']}")
+score += 1
+else:
+st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
 
-    if score == len(QUESTIONS):
-        st.success("🎉 You win! เต็มทุกข้อ!")
-    if score >= len(QUESTIONS) * 0.6:
-        st.success("👍 เก่งมาก!")
-    else:
-        st.error("💀 You lose! ลองใหม่อีกครั้งนะ")
+# แสดงคะแนนรวม (ขยับไว้นอกลูป)
+st.info(f"📊 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
 
+if score == len(QUESTIONS):
+st.success("🎉 You win! เต็มทุกข้อ!")
+elif score >= len(QUESTIONS) * 0.6:
+st.success("เก่งมาก!")
+else:
+st.error("You lose! ลองใหม่อีกครั้งนะ")
 
 
 st.button("🎮 เริ่มเล่นเกม", on_click=reset_game)
