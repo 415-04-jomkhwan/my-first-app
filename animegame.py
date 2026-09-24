@@ -34,7 +34,7 @@ def show_result_dialog(answers):
     score = 0
     
     for i, q in enumerate(QUESTIONS, start=1):
-    # ดึงคำตอบอย่างปลอดภัย หากหาคีย์ไม่เจอจะใส่ค่าว่าง "" ให้แทน
+    
     raw_ans = answers.get(q["key"], "") if answers else ""
     u_ans = str(raw_ans).strip().lower()
     
@@ -44,7 +44,7 @@ def show_result_dialog(answers):
     else:
     st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
     
-    # แสดงคะแนนรวม (ขยับไว้นอกลูป)
+    
     st.info(f"📊 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
     
     if score == len(QUESTIONS):
