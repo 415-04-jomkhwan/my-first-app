@@ -33,8 +33,7 @@ def show_result_dialog(answers):
     st.balloons()
     score = 0
     
-    for i, q in enumerate(QUESTIONS, start=1):
-    
+    for i, q in enumerate(QUESTIONS, start=1)
     raw_ans = answers.get(q["key"], "") if answers else ""
     u_ans = str(raw_ans).strip().lower()
     
