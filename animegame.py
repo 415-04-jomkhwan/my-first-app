@@ -39,8 +39,8 @@ def show_result_dialog(answers):
         u_ans = str(raw_ans).strip().lower()
     
     if u_ans == q["answer"]:
-    st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง - {q['answer']}")
-    score += 1
+        st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง - {q['answer']}")
+        score += 1
     else:
     st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
     
