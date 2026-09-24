@@ -42,10 +42,10 @@ def show_result_dialog(answers):
         st.success(f"✅ ข้อ {i} ({q['emoji']}): ถูกต้อง - {q['answer']}")
         score += 1
     else:
-    st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
-    
-    # แสดงคะแนนรวม (ขยับไว้นอกลูป)
-    st.info(f"📊 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
+        st.error(f"❌ ข้อ {i} ({q['emoji']}): ยังไม่ถูกต้อง (คุณตอบ '{u_ans}' / เฉลย '{q['answer']}')")
+        
+
+        st.info(f"📊 ได้คะแนนรวม: {score} จาก {len(QUESTIONS)} คะแนน")
     
     if score == len(QUESTIONS):
     st.success("🎉 You win! เต็มทุกข้อ!")
