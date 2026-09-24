@@ -70,14 +70,15 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 
 current_answers = {}
 for i, q in enumerate(QUESTIONS, start=1):
-    val_key = f"{q['key']}_val"
-    ans = st.text_input(
+    input_key = f"input_{q['key']}"
+    if input_key not in st.session_state:
+    st.session_state[input_key] = ""
+ans = st.text_input(
 f"ข้อ {i}: `{q['hint']}` {q['emoji']}",
-    value=st.session_state[val_key],
-    key=f"input_{q['key']}",
-    )
-    st.session_state[val_key] = ans
-    current_answers[q["key"]] = ans
+key=input_key
+)
+
+current_answers[q["key"]] = ans
 
 
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
